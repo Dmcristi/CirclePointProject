@@ -62,9 +62,10 @@ public class MovablePoint implements Movable {
             throw new IllegalArgumentException("Invalid argument " + howMuch
                     + ", argument must be positive.");
         }
-        this.y += howMuch;
-        if (this.y > PLAIN_Y_MAX) {
-            throw new ExceedingPlainException("y = " + this.y + ", y shouldn't be greater than 1000 or less than -1000.");
+        if (this.y + howMuch > PLAIN_Y_MAX) {
+            throw new ExceedingPlainException("y = " + (this.y + howMuch) + ", y shouldn't be greater than 1000 or less than -1000.");
+        } else {
+            this.y += howMuch;
         }
     }
 
@@ -74,9 +75,10 @@ public class MovablePoint implements Movable {
             throw new IllegalArgumentException("Invalid argument " + howMuch
                     + ", argument must be positive.");
         }
-        this.y -= howMuch;
-        if (this.y < PLAIN_Y_MIN) {
-            throw new ExceedingPlainException("y = " + this.y + ", y shouldn't be greater than 1000 or less than -1000.");
+        if (this.y - howMuch < PLAIN_Y_MIN) {
+            throw new ExceedingPlainException("y = " + (this.y - howMuch) + ", y shouldn't be greater than 1000 or less than -1000.");
+        } else {
+            this.y -= howMuch;
         }
     }
 
@@ -86,9 +88,10 @@ public class MovablePoint implements Movable {
             throw new IllegalArgumentException("Invalid argument " + howMuch
                     + ", argument must be positive.");
         }
-        this.x -= howMuch;
-        if (this.x < PLAIN_X_MIN) {
-            throw new ExceedingPlainException("x = " + this.x + ", x shouldn't be greater than 1000 or less than -1000.");
+        if (this.x - howMuch < PLAIN_X_MIN) {
+            throw new ExceedingPlainException("x = " + (this.x - howMuch) + ", x shouldn't be greater than 1000 or less than -1000.");
+        } else {
+            this.x -= howMuch;
         }
     }
 
@@ -98,9 +101,10 @@ public class MovablePoint implements Movable {
             throw new IllegalArgumentException("Invalid argument " + howMuch
                     + ", argument must be positive.");
         }
-        this.x += howMuch;
-        if (this.x > PLAIN_X_MAX) {
-            throw new ExceedingPlainException("x = " + this.x + ", x shouldn't be greater than 1000 or less than -1000.");
+        if (this.x + howMuch > PLAIN_X_MAX) {
+            throw new ExceedingPlainException("x = " + (this.x + howMuch) + ", x shouldn't be greater than 1000 or less than -1000.");
+        } else {
+            this.x += howMuch;
         }
     }
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/circlePointFortechProject.iml" filepath="$PROJECT_DIR$/circlePointFortechProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circlePointProject.iml" filepath="$PROJECT_DIR$/circlePointProject.iml" />
     </modules>
   </component>
 </project>

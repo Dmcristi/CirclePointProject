@@ -1,6 +1,7 @@
 package com.project.circlepoint;
 
 import com.project.circlepoint.exceptions.ExceedingPlainException;
+import com.project.circlepoint.exceptions.InvalidValuesException;
 
 /**
  * Specifies that a geometric form is movable in a 2D plain.
@@ -43,7 +44,7 @@ public interface Movable {
      *
      * @param howMuch the number of points to move up in the plain
      */
-    void moveUp(int howMuch) throws ExceedingPlainException;
+    void moveUp(int howMuch) throws ExceedingPlainException, InvalidValuesException;
 
     /**
      * Moves the form down in the plain with the specified number of points.

@@ -1,8 +1,10 @@
 package com.project.circlepoint;
 
+import com.project.circlepoint.exceptions.ExceedingPlainException;
 import com.project.circlepoint.exceptions.InvalidValuesException;
 import com.project.circlepoint.exceptions.NotInPlainException;
 import com.project.circlepoint.movableImpl.MovableCircle;
+import com.project.circlepoint.movableImpl.MovablePoint;
 
 public class MovableTest {
     public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class MovableTest {
 //        try {
 //            MovablePoint point = new MovablePoint(-1000, 0, 0, 0);
 //            System.out.println(point);
-//            point.moveRight(2001);
+//            point.moveRight(2000);
 //            System.out.println(point);
 //        } catch (InvalidValuesException e) {
 //            e.printStackTrace();
@@ -19,16 +21,12 @@ public class MovableTest {
 //        }
 
         try {
-            MovableCircle circle = new MovableCircle(-10,-2,0,0,995);
+            MovableCircle circle = new MovableCircle(0,0,0,0,1);
             System.out.println(circle);
-           // circle.setRadius(994);
+            circle.moveRight(999);
             System.out.println(circle);
-        } catch (InvalidValuesException e) {
-            e.printStackTrace();
-        } catch (NotInPlainException e) {
+        } catch (InvalidValuesException | NotInPlainException | ExceedingPlainException e) {
             e.printStackTrace();
         }
-
-
     }
 }
